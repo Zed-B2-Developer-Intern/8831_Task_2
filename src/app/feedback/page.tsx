@@ -11,6 +11,7 @@ export default function FeedbackPage() {
   };
 
   return (
+    
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-4">Submit Feedback</h2>
       <textarea
@@ -22,8 +23,10 @@ export default function FeedbackPage() {
         onClick={handleSubmit}
         className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
       >
+        
         Submit
       </button>
+     
     </div>
   );
 }

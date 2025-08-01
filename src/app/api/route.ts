@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
       const feedback = await prisma.feedback.create({
-        data: { name, email, rating, comment, eventId },
+        data: { name, email, rating, comment, eventId, message: "Default message", event: { connect: { id: eventId } } },
       });
 
       return res.status(200).json(feedback);

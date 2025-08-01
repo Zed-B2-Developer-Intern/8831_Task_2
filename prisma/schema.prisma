@@ -14,6 +14,7 @@ model Feedback {
   email     String
   rating    Int
   comment   String
+  message   String
   createdAt DateTime @default(now())
   eventId   String
   event     Event    @relation(fields: [eventId], references: [id]) // 👈 Add this
